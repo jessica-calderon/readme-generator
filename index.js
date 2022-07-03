@@ -34,19 +34,6 @@ const questionsArr = [
   },
   {
     type: 'input',
-    name: 'github',
-    message: 'What is your GitHub username? (Required)',
-    validate: githubInput => {
-      if (githubInput) {
-        return true;
-      } else {
-        console.log('Please enter your GitHub username!!');
-        return false;
-      }
-    }
-  },
-  {
-    type: 'input',
     name: 'title',
     message: 'What is the title of your project? (Required)',
     validate: titleInput => {
@@ -70,6 +57,11 @@ const questionsArr = [
         return false;
       }
     }
+  },
+  {
+    type: 'input',
+    name: 'languages',
+    message: 'What languages did you use to build this project?'
   },
   {
     type: 'list',
@@ -131,5 +123,13 @@ const questionsArr = [
 // Function call to initialize app
 /* init(); */
 const init = () => {
-  
-}
+  return inquirer.prompt(questionsArr)
+  .then(readmeInfo => {
+    return readmeInfo
+  })
+};
+init()
+.then(readmeInfo => {
+  console.log(readmeInfo);
+  return generateMarkdown(readmeInfo);
+});
