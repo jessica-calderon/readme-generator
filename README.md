@@ -47,6 +47,4 @@ Questions? Please contact me at the following links: <br>
 
 ## [Application Preview](#table-of-contents)
 
-
-https://user-images.githubusercontent.com/100880558/177032371-1a317828-8f5e-404f-b0ae-c5e7cfb80be4.mp4
-
+https://drive.google.com/file/d/1BaNZq72MxqzgXt_advbYIXwV9Nek-q-d/view
