@@ -1,52 +1,33 @@
-const fs = require('fs');
-// write files
-const writeFile = fileContent => {
-    return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', fileContent, err => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            resolve({
-                ok: true,
-                message: 'File created!'
-            });
-        });
-    });
-};
-// copying file
-const copyFile = () => {
-    return new Promise((resolve, reject) => {
-        fs.copyFile('./src/style.css', './dist/style.css', err => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            resolve({
-                ok: true,
-                message: 'Stylesheet created!'
-            });
-        });
-    });
-};
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-/* function renderLicenseBadge(license) {} */
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-/* function renderLicenseLink(license) {} */
+// Function to generate markdown for README
+function generateMarkdown(data) {
+    return `
+    # ${data.title}
+    ## Table-of-Contents
+    * [Description](#description)
+    * [Built With](#languages)
+    * [Installation](#installation)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Questions](#questions)
+    
+    ## [Description](#table-of-contents)
+    ${data.description}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-/* function renderLicenseSection(license) {} */
+    ## [Built With](#table-of-contents)
+    ${data.languages}
 
-// TODO: Create a function to generate markdown for README
-/* function generateMarkdown(data) {
-  return `# ${data.title}
-`;
+    ## [License](#table-of-contents)
+
+    ## [Contributing](#table-of-contents)
+
+    ## [Installation](#table-of-contents)
+    ${data.install}
+
+    ## [Questions](#table-of-contents)
+    Questions? Please contact me at the following links: 
+    [GitHub](https://github.com/${data.github})
+    [Email: ${data.email}](mailto${data.email})
+    `;
 }
-
-module.exports = generateMarkdown; */
-module.exports = { writeFile, copyFile };

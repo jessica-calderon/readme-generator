@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
@@ -68,68 +68,78 @@ const questionsArr = [
     name: 'license',
     message: 'What kind of license does your project have?',
     choices: ['agpl', 'Apache', 'MIT', 'No license']
-   },
-   {
+  },
+  {
     type: 'confirm',
     name: 'contributors',
     message: 'Do you want to allow other developers to contribute?',
     default: true
-   },
-   {
+  },
+  {
     type: 'input',
     name: 'contribute',
     message: 'Please provide contribution guidelines. (Required)',
     when: ({ contribute }) => {
       if (contribute) {
-          return true;
+        return true;
       } else {
-          return false;
+        return false;
       }
-  },
-  validate: contributorInput => {
+    },
+    validate: contributorInput => {
       if (contributorInput) {
-          return true;
+        return true;
       } else {
-          console.log("Please enter your project's contributor guidelines!");
-          return false;
+        console.log("Please enter your project's contributor guidelines!");
+        return false;
       }
-  }
-},  
-{
-  type: 'input',
-  name: 'install',
-  message: 'What are the steps required to install your project?',
-  validate: nameInput => {
-      if (nameInput) {
-          return true;
+    }
+  },
+  {
+    type: 'input',
+    name: 'install',
+    message: 'What are the steps required to install your project? (If a web application, please enter the live deployed project link.)',
+    validate: installInput => {
+      if (installInput) {
+        return true;
       } else {
-          console.log('Please enter steps required to install your project!');
-          return false; 
+        console.log('Please enter steps required to install your project!');
+        return false;
       }
-  }
-},
+    }
+  },
 
 ]
 
-// TODO: Create an array of questions for user input
-/* const questions = []; */
-
-// TODO: Create a function to write README file
-/* function writeToFile(fileName, data) {} */
+// function to write README file
+const writeFile = fileInfo => {
+  return new Promise((resolve, reject) => {
+    fs.writeFile('./dist/generatedREADME.md', fileInfo, err => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve({
+        ok: true,
+        message: 'README file created!'
+      });
+    });
+  });
+}
 
 // TODO: Create a function to initialize app
 /* function init() {} */
 
-// Function call to initialize app
-/* init(); */
+// store questions info for readme
 const init = () => {
   return inquirer.prompt(questionsArr)
-  .then(readmeInfo => {
-    return readmeInfo
-  })
+    .then(readmeInfo => {
+      return readmeInfo
+    })
 };
+// Function call to initialize app
 init()
-.then(readmeInfo => {
-  console.log(readmeInfo);
-  return generateMarkdown(readmeInfo);
-});
+  .then(readmeInfo => {
+    console.log(readmeInfo);
+    return generateMarkdown(readmeInfo);
+  });
