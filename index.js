@@ -70,6 +70,32 @@ const questionsArr = [
     choices: ['agpl', 'Apache', 'MIT', 'No license']
   },
   {
+    type: 'input',
+    name: 'usage',
+    message: 'Please provide instructions and/or examples for use. (Required)',
+    validate: usageInput => {
+        if (usageInput) {
+            return true;
+        } else {
+            console.log('Please enter your use instructions!');
+            return false;
+        }
+    }
+},
+{
+  type: 'input',
+  name: 'test',
+  message: 'Please provide instructions on how to test the app. (Required)',
+  validate: testInput => {
+      if (testInput) {
+          return true;
+      } else {
+          console.log('Please enter test instructions. Ex, "npm test"');
+          return false;
+      }
+  }
+},
+  {
     type: 'confirm',
     name: 'contributors',
     message: 'Do you want to allow other developers to contribute?',
@@ -98,7 +124,7 @@ const questionsArr = [
   {
     type: 'input',
     name: 'install',
-    message: 'What are the steps required to install your project? (If a web application, please enter the live deployed project link.)',
+    message: 'What are the steps required to install your project? (If a web application, please enter the repository or live deployed project link.)',
     validate: installInput => {
       if (installInput) {
         return true;

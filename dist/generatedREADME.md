@@ -5,6 +5,8 @@
 * [Built With](#languages)
 * [Installation](#installation)
 * [Contributing](#contributing)
+* [Usage](#usage)
+* [Tests](#tests)
 * [Questions](#questions)
 
     ![badge](https://img.shields.io/badge/license-MIT-blue)
@@ -23,13 +25,19 @@ The application is covered under the following license: <br>
       
       
 
+## [Usage](#table-of-contents)
+1) Visit and clone code repository at link provided below. 2) In the project's root file terminal, type 'node index' + ENTER 3) Answer provided questions. 
+
+## [Tests](#table-of-contents)
+npm test
+
 ## [Contributing](#table-of-contents)
 
 Thank you for your interest in contributing to this project, however, I am currently not accepting third party contributions.
       
 
 ## [Installation](#table-of-contents)
-https://jessica-calderon.github.io/readme-generator/
+https://github.com/jessica-calderon/readme-generator
 
 ## [Questions](#table-of-contents)
 Questions? Please contact me at the following links: <br>

@@ -63,6 +63,8 @@ return `
 * [Built With](#languages)
 * [Installation](#installation)
 * [Contributing](#contributing)
+* [Usage](#usage)
+* [Testing](#tests)
 * [Questions](#questions)
 ${licenseBadge(data.license)} 
 
@@ -73,6 +75,12 @@ ${data.description}
 ${data.languages}
 
 ${licenseSection(data.license)}
+
+## [Usage](#table-of-contents)
+${data.usage}
+
+## [Testing](#table-of-contents)
+${data.test}
 
 ## [Contributing](#table-of-contents)
 ${contributeSection(data.contributors, data.contribute)}
