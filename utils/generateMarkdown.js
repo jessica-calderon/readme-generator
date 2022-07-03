@@ -83,7 +83,7 @@ ${data.install}
 ## [Questions](#table-of-contents)
 Questions? Please contact me at the following links: <br>
 [GitHub](https://github.com/${data.github}) <br>
-[Email: ${data.email}](mailto${data.email})
+[Email: ${data.email}](mailto:${data.email})
 `;
 }
 module.exports = generateMarkdown;
