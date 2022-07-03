@@ -20,59 +20,70 @@ function licenseLink(license) {
         return ' ';
     }
 }
-// table of contents license badge 
-function license1(license) {
+// table of contents license header
+function tocLicense(license) {
     if (license !== 'no license') {
-        return `
+    return `
     * [License](#license)
       `;
-        // empty if none 
     } else {
-        return ' ';
+      return ' ';
     }
-}
-// license section 
-function license2(license) {
+   }
+   // license section
+   function licenseSection(license) {
     if (license !== 'no license') {
-        return `
-    ## [License](#table-of-contents)
-    This application is covered under the following license:
-    ${licenseLink(license)}
+    return `
+## [License](#table-of-contents)
+The application is covered under the following license: <br>${licenseLink(license)}
       `;
-        // empty string if none 
     } else {
-        return ' ';
+      return ' ';
     }
-}
+   }
+  
+// if user chooses no contributors
+function contributeSection(contributors, data) {
+    if (!contributors) {
+      return `
+Thank you for your interest in contributing to this project, however, I am currently not accepting third party contributions.
+      `;
+    } else {
+      return `
+    ${data}
+      `;
+    }
+  }
 // Function to generate markdown for README
 function generateMarkdown(data) {
-    return `
-    # ${data.title}
-    ## Table-of-Contents
-    * [Description](#description)
-    * [Built With](#languages)
-    * [Installation](#installation)
-    ${license1(data.license)}    
-    * [Contributing](#contributing)
-    * [Questions](#questions)
-    
-    ## [Description](#table-of-contents)
-    ${data.description}
+return `
+# ${data.title}
+## Table-of-Contents
+* [Description](#description)
+* [Built With](#languages)
+* [Installation](#installation)
+* [Contributing](#contributing)
+* [Questions](#questions)
+${licenseBadge(data.license)} 
 
-    ## [Built With](#table-of-contents)
-    ${data.languages}
+## [Description](#table-of-contents)
+${data.description}
 
-    ${license2(data.license)}
+## [Languages](#table-of-contents)
+${data.languages}
 
-    ## [Contributing](#table-of-contents)
+${licenseSection(data.license)}
 
-    ## [Installation](#table-of-contents)
-    ${data.install}
+## [Contributing](#table-of-contents)
+${contributeSection(data.contributors, data.contribute)}
 
-    ## [Questions](#table-of-contents)
-    Questions? Please contact me at the following links: 
-    [GitHub](https://github.com/${data.github})
-    [Email: ${data.email}](mailto${data.email})
-    `;
+## [Installation](#table-of-contents)
+${data.install}
+
+## [Questions](#table-of-contents)
+Questions? Please contact me at the following links: <br>
+[GitHub](https://github.com/${data.github}) <br>
+[Email: ${data.email}](mailto${data.email})
+`;
 }
 module.exports = generateMarkdown;

@@ -142,4 +142,13 @@ init()
   .then(readmeInfo => {
     console.log(readmeInfo);
     return generateMarkdown(readmeInfo);
+  })
+  .then(writeMD => {
+    return writeFile(writeMD);
+  })
+  .then(response => {
+    console.log(response.message);
+  })
+  .catch(err => {
+    console.log(err);
   });
