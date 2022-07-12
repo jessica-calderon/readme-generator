@@ -1,6 +1,6 @@
 
-# README Generator
-## Table-of-Contents
+# Test
+## Table of Contents
 * [Description](#description)
 * [Built With](#languages)
 * [Installation](#installation)
@@ -8,28 +8,29 @@
 * [Usage](#usage)
 * [Testing](#tests)
 * [Questions](#questions)
+* [Application Preview](#application-preview)
 
-    ![badge](https://img.shields.io/badge/license-MIT-blue)
+    ![badge](https://img.shields.io/badge/license-agpl-blue)
        
 
 ## [Description](#table-of-contents)
-A CIL application that allows developers to generate professional READMEs for their projects based on information input.
+Test
 
 ## [Languages](#table-of-contents)
-JavaScript, Node.js
+Test
 
 
 ## [License](#table-of-contents)
 The application is covered under the following license: <br>
-    [MIT](https://choosealicense.com/licenses/MIT)
+    [agpl](https://choosealicense.com/licenses/agpl)
       
       
 
 ## [Usage](#table-of-contents)
-Visit repository, clone code, and run in terminal
+Test
 
 ## [Testing](#table-of-contents)
-Run npm test in terminal
+Test
 
 ## [Contributing](#table-of-contents)
 
@@ -37,8 +38,11 @@ Thank you for your interest in contributing to this project, however, I am curre
       
 
 ## [Installation](#table-of-contents)
-Visit https://github.com/jessica-calderon/readme-generator
+test
 
+## [Application Preview](#table-of-contents)
+Click the image to see the live demo.
+<a href='google.com' alt='preview video link'><img src='https://ca.blenderboyz.com/wp-content/uploads/2020/04/test.jpg'></a>
 ## [Questions](#table-of-contents)
 Questions? Please contact me at the following links: <br>
 [GitHub](https://github.com/jessica-calderon) <br>

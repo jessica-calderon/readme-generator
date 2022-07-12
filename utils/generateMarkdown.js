@@ -58,7 +58,7 @@ Thank you for your interest in contributing to this project, however, I am curre
 function generateMarkdown(data) {
 return `
 # ${data.title}
-## Table-of-Contents
+## Table of Contents
 * [Description](#description)
 * [Built With](#languages)
 * [Installation](#installation)
@@ -66,6 +66,7 @@ return `
 * [Usage](#usage)
 * [Testing](#tests)
 * [Questions](#questions)
+* [Application Preview](#application-preview)
 ${licenseBadge(data.license)} 
 
 ## [Description](#table-of-contents)
@@ -88,6 +89,9 @@ ${contributeSection(data.contributors, data.contribute)}
 ## [Installation](#table-of-contents)
 ${data.install}
 
+## [Application Preview](#table-of-contents)
+Click the image to see the live demo.
+<a href='${data.previewLink}' alt='preview video link'><img src='${data.previewImg}'></a>
 ## [Questions](#table-of-contents)
 Questions? Please contact me at the following links: <br>
 [GitHub](https://github.com/${data.github}) <br>

@@ -134,6 +134,22 @@ const questionsArr = [
       }
     }
   },
+  {
+    type: 'confirm',
+    name: 'preview',
+    message: 'Do you have an application preview? (image and/or link)',
+    default: true
+  },
+  {
+    type: 'input',
+    name: 'previewImg',
+    message: 'Please insert your preview image link or path. (Ex., ./assets/img.png)'
+  },
+  {
+    type: 'input',
+    name: 'previewLink',
+    message: 'Please insert your preview demo link or path. (Ex., YouTube video link)'
+  },
 
 ]
 
@@ -153,8 +169,6 @@ const writeFile = fileInfo => {
   });
 }
 
-// TODO: Create a function to initialize app
-/* function init() {} */
 
 // store questions info for readme
 const init = () => {
