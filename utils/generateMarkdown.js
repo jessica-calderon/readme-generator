@@ -1,63 +1,66 @@
 // license logic
 // license badge
 function licenseBadge(license) {
-    if (license !== 'no license') {
-        return `
+  if (license !== "no license") {
+    return `
     ![badge](https://img.shields.io/badge/license-${license}-blue)
       `;
-        // empty string if no license 
-    } else {
-        return ' ';
-    }
+    // empty string if no license
+  } else {
+    return " ";
+  }
 }
 // license link
 function licenseLink(license) {
-    if (license !== 'no license') {
-        return `
+  if (license !== "no license") {
+    return `
     [${license}](https://choosealicense.com/licenses/${license})
       `;
-    } else {
-        return ' ';
-    }
+  } else {
+    return " ";
+  }
 }
 // table of contents license header
 function tocLicense(license) {
-    if (license !== 'no license') {
+  if (license !== "no license") {
     return `
     * [License](#license)
       `;
-    } else {
-      return ' ';
-    }
-   }
-   // license section
-   function licenseSection(license) {
-    if (license !== 'no license') {
+  } else {
+    return " ";
+  }
+}
+// license section
+function licenseSection(license) {
+  if (license !== "no license") {
     return `
 ## [License](#table-of-contents)
-The application is covered under the following license: <br>${licenseLink(license)}
+The application is covered under the following license: <br>${licenseLink(
+      license
+    )}
       `;
-    } else {
-      return ' ';
-    }
-   }
-  
+  } else {
+    return " ";
+  }
+}
+
 // if user chooses no contributors
 function contributeSection(contributors, data) {
-    if (!contributors) {
-      return `
+  if (!contributors) {
+    return `
 Thank you for your interest in contributing to this project, however, I am currently not accepting third party contributions.
       `;
-    } else {
-      return `
+  } else {
+    return `
     ${data}
       `;
-    }
   }
+}
 // Function to generate markdown for README
 function generateMarkdown(data) {
-return `
+  return `
 # ${data.title}
+![badge](https://img.shields.io/badge/Made%20with%20%E2%99%A5%20by%20-Jessica%20E.%20Calderon-blueviolet)
 ## Table of Contents
 * [Description](#description)
 * [Built With](#languages)
@@ -91,7 +94,9 @@ ${data.install}
 
 ## [Application Preview](#table-of-contents)
 Click the image to see the live demo.
-<a href='${data.previewLink}' alt='preview video link'><img src='${data.previewImg}'></a>
+<a href='${data.previewLink}' alt='preview video link'><img src='${
+    data.previewImg
+  }'></a>
 ## [Questions](#table-of-contents)
 Questions? Please contact me at the following links: <br>
 [GitHub](https://github.com/${data.github}) <br>

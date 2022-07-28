@@ -1,5 +1,5 @@
 
-# Test
+# RP2040 Macros
 ## Table of Contents
 * [Description](#description)
 * [Built With](#languages)
@@ -10,39 +10,39 @@
 * [Questions](#questions)
 * [Application Preview](#application-preview)
 
-    ![badge](https://img.shields.io/badge/license-agpl-blue)
+    ![badge](https://img.shields.io/badge/license-MIT-blue)
        
 
 ## [Description](#table-of-contents)
-Test
+CircuitPython Macros for Adafruit RP2040 12 Key Macropad
 
 ## [Languages](#table-of-contents)
-Test
+Python
 
 
 ## [License](#table-of-contents)
 The application is covered under the following license: <br>
-    [agpl](https://choosealicense.com/licenses/agpl)
+    [MIT](https://choosealicense.com/licenses/MIT)
       
       
 
 ## [Usage](#table-of-contents)
-Test
+Clone root directory and copy to mounted RP2040 (must be latest CircuitPython version 8.0.0)
 
 ## [Testing](#table-of-contents)
-Test
+N/A
 
 ## [Contributing](#table-of-contents)
 
-Thank you for your interest in contributing to this project, however, I am currently not accepting third party contributions.
+    undefined
       
 
 ## [Installation](#table-of-contents)
-test
+* Mac shortcuts for Zoom application * Frequently used git commands
 
 ## [Application Preview](#table-of-contents)
 Click the image to see the live demo.
-<a href='google.com' alt='preview video link'><img src='https://ca.blenderboyz.com/wp-content/uploads/2020/04/test.jpg'></a>
+<a href='n' alt='preview video link'><img src='n'></a>
 ## [Questions](#table-of-contents)
 Questions? Please contact me at the following links: <br>
 [GitHub](https://github.com/jessica-calderon) <br>
