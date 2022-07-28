@@ -13,7 +13,7 @@
        
 
 ## [Description](#table-of-contents)
-A Node.js CIL application that allows developers to generate professional project READMEs based on information input.
+A Node.js CLI application that allows developers to generate professional project READMEs based on information input.
 
 ## [Languages](#table-of-contents)
 JavaScript, Node.js
